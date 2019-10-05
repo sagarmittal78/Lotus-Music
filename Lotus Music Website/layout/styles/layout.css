@@ -1,0 +1,453 @@
+@charset "utf-8";
+/*
+Template Name: Fluffster
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+File: Layout CSS
+*/
+
+@import url("fontawesome-free/css/fontawesome-all.min.css");
+@import url("framework.css");
+
+/* my styles */
+.icon-color{
+  color: #000;
+  z-index: 2;
+}
+.logo-img{
+  height: 2rem;
+  width: 2rem;
+  border-right: 100%;
+  margin-right: 10px;
+}
+.latest-video{
+	border-radius: 5%;
+}
+.iframe-container{
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	height: 0;
+}
+.iframe-container iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.sub-btn{
+  height: 300px;
+  background-color: #fff;
+}
+.yt-icon:hover{
+  color: red;
+}
+.fb-icon:hover{
+  color: #4267B2;
+}
+.tw-icon:hover{
+  color: #1DA1F2;
+}
+.is-icon:hover{
+  color: #B63879;
+}
+/* Rows
+--------------------------------------------------------------------------------------------------------------- */
+.row0, .row0 a{}
+.row1, .row1 a{}
+.row2, .row2 a{}
+.row3, .row3 a{}
+.row4, .row4 a{}
+.row5, .row5 a{}
+
+
+/* Top Bar
+--------------------------------------------------------------------------------------------------------------- */
+#topbar{padding:15px 0; text-transform:uppercase; text-align:center; font-weight:700;}
+
+#topbar *{margin:0;}
+#topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
+#topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
+#topbar i{line-height:normal;}
+
+
+
+
+/* Page Intro
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{background-size:100% 75%; padding-bottom: 20px; /* This squashes the image - so only use a pattern of sorts */ text-align:center;}
+#pageintro figure{padding-bottom:15px;}/* Required for the box-shadow on the image */
+#pageintro figcaption{margin:0; padding:20px 0; font-size:4rem;}
+
+
+/* Content Area
+--------------------------------------------------------------------------------------------------------------- */
+.container{padding:80px 0;}
+
+/* Content */
+.container .content{}
+
+.sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
+.sectiontitle *{margin:0;}
+
+#services{margin-bottom:80px;}
+#services > li{margin-bottom:50px;}
+#services > li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+#services > li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+#services article *{margin:0; padding:0; text-align: center;}
+#services article .heading, #services article p{margin-bottom:20px;}
+#services article i{margin-right:15px; font-size:32px;}
+#services article footer i{margin-right:0; font-size:inherit;}
+
+
+/* Sidebar */
+.container .sidebar{}
+
+.sidebar .sdb_holder{margin-bottom:50px;}
+.sidebar .sdb_holder:last-child{margin-bottom:0;}
+
+
+/* Click to Action
+--------------------------------------------------------------------------------------------------------------- */
+.cta{padding:50px 0;}
+.cta > :first-child{margin-top:10px;}
+.cta > :last-child{margin-bottom:0;}/* Used when elements stack in smaller viewports */
+
+.cta footer{text-align:center;}
+.cta footer a{display:block;}
+
+
+/* Intro Blocks
+--------------------------------------------------------------------------------------------------------------- */
+#introblocks{}
+#introblocks > li:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
+#introblocks article{display:block; text-align:center; padding:30px 20px;}
+#introblocks article *{margin:0 0 25px 0;}
+#introblocks article .btn{margin:10px 0 0 0;}
+#introblocks article > :last-child{margin-bottom:0;}
+#introblocks article i{display:inline-block; width:80px; height:80px; line-height:78px; border:1px solid; text-align:center; font-size:32px;}
+#introblocks article footer i{width:auto; height:auto; line-height:inherit; border:none; font-size:inherit;}
+#introblocks article .flip-container .front{text-align: center;}
+
+
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer{padding:80px 0;}
+
+#footer .heading{margin-bottom:50px; font-size:1.2rem;}
+
+#footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid;}
+#footer .linklist li:last-child{margin:0; padding:0; border:none;}
+#footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
+#footer .linklist li, #footer .linklist li::after{clear:both;}
+
+#footer .contact{}
+#footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
+#footer .contact li *{margin:0; padding:0; line-height:1.6;}
+#footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
+
+#footer input, #footer button{border:1px solid;}
+#footer input{display:block; width:100%; padding:8px;}
+#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
+
+
+/* Copyright
+--------------------------------------------------------------------------------------------------------------- */
+#copyright{padding:20px 0;}
+#copyright *{margin:0; padding:0;}
+
+
+/* Transition Fade
+This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
+If you don't want it to fade all elements, you have to list the ones you want to be faded individually
+Delete it completely to stop fading
+--------------------------------------------------------------------------------------------------------------- */
+*, *::before, *::after{transition:all .1s ease-in-out;}
+#mainav form *{transition:none !important;}
+
+
+
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:.5; background-color:#D9487C;}
+#backtotop:hover{opacity:1;}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body{color:#DFDFDF; background-color:#000;}
+a{color:red;}
+a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
+hr, .borderedbox{border-color:#D7D7D7;}
+label span{color:#FF0000; background-color:inherit;}
+input:focus, textarea:focus, *:required:focus{border-color:#D9487C;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay.light{color:#474747;}
+.overlay.light::after{background-color:rgba(255,255,255,.7);}
+
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#D9487C; border-color:#D9487C;}
+.btn:hover, .btn.inverse{color:inherit; background-color:#fff; border-color:inherit;}
+
+.imgover:hover::before{background:rgba(0,0,0,.55);}
+.imgover, .imgover:hover::after{color:#D9487C;}
+
+
+/* Rows */
+.row0, .row0 a{color:#FFFFFF; background-color:#000000;}
+.row1{color:#474747; background-color:#FFFFFF;}
+.row2{color:#FFFFFF; background:linear-gradient(-90deg, #FA543A,#DB4977);}
+.row3{color:#474747; background-color:#FFFFFF;}
+.row4{color:#DFDFDF; background-color:#262626; border-color:#FA543A;}
+.row5, .row5 a{color:#DFDFDF; background-color:#1A1A1A;}
+
+.coloured{color:#FFFFFF; background:linear-gradient(90deg, #FA543A,#DB4977);}
+.coloured .btn{background-color:#D53B63; border-color:#D9487C;}
+.coloured .btn:hover{background-color:#fff; border-color:#000;}
+.coloured  a:hover{color: #000;}
+
+/* Top Bar */
+#topbar ul li{border-color:rgba(255,255,255,.4);}
+
+
+
+/* Page Intro */
+#pageintro{color:#FFFFFF;}
+#pageintro img{box-shadow:0px 15px 10px -10px rgba(0,0,0,.5);}
+
+
+/* Content Area */
+#services a{color:inherit;}
+#services article:hover a{color:#D9487C;}
+
+
+/* Intro Blocks */
+#introblocks article{box-shadow:0px 0px 8px rgba(255,255,255,.2);}
+#introblocks article:hover{background-color:rgba(0,0,0,1);}
+
+#introblocks article footer i{color:inherit;}
+
+#introblocks article .btn:hover{background-color: #fff; color: #000;}
+
+
+/* Footer */
+#footer .heading{color:#FFFFFF;}
+#footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.1);}
+
+#footer input, #footer button{border-color:transparent;}
+#footer input{color:#474747; background-color:#FFFFFF;}
+#footer input:focus{border-color:#D9487C;}
+#footer button{color:#FFFFFF; background-color:#D9487C;}
+#footer a{color: #D9487c}
+
+/* Navigation */
+
+.container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
+.container .sidebar nav a:hover{color:#D9487C;}
+
+#backtotop{color:#FFFFFF; background-color:#D9487C;}
+
+
+
+/* we work with */
+
+.singer-img{
+  height: 8rem;
+  width: 8rem;
+  border-right: 100%;
+  margin-right: 10px;
+  padding: 1% 1% 1%;
+}
+.singer-video{
+  border-radius: 10%;
+}
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container{
+  width: 320px;
+  height: 200px;
+  }
+  .back {
+	width: 320px;
+	height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 2s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+  height: 200px;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:1140px){
+	.hoc{max-width:1140px;}
+}
+
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:978px){
+	.hoc{max-width:90%;}
+#pageintro figcaption{margin:0; padding:10px 0; font-size:4rem;}
+	#topbar{}
+
+	#header{padding:30px 0;}
+	#header #logo{margin-top:3px;}
+
+	#mainav{padding:15px;}
+	#mainav ul{display:none;}
+	#mainav form{display:block;}
+
+
+
+	.container{}
+	#comments input[type="reset"]{margin-top:10px;}
+	.pagination li{display:inline-block; margin:0 5px 5px 0;}
+
+	#footer{}
+
+	#copyright{}
+	#copyright p:first-of-type{margin-bottom:10px;}
+}
+
+@media screen and (max-width:750px){
+	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
+	.fl_left, .fl_right{display:block; float:none;}
+	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
+	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
+
+	#header{text-align:center;}
+	#header section > div form{width:100%; max-width:300px; float:none; margin:0 auto;}
+	#header section > div form input{float:none;}
+	#header #logo{margin:0 0 15px 0;}
+
+	.sectiontitle{max-width:none;}
+
+
+#pageintro figcaption{margin:0; padding:20px 0; font-size:4rem;}
+	#services > li:nth-last-child(-n+3){margin-bottom:30px;}
+
+	.cta > :first-child{margin-top:0;}
+	.cta footer a{display:inline-block;}
+
+	#footer{padding-bottom:50px;}/* Not required, just looks a little better */
+}
+
+@media screen and (max-width:450px){
+	#pageintro figcaption{padding:10px 0; font-size:2rem;}
+}
+
+
+/* Other
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:650px){
+	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
+	.scrollable table{margin:0; padding:0; white-space:nowrap;}
+
+	.inline li{display:block; margin-bottom:10px;}
+	.pushright li{margin-right:0;}
+
+	.font-x2{font-size:1.4rem;}
+	.font-x3{font-size:1.6rem;}
+
+	#header section, #header section > div{display:block; width:100%;}
+	#header section > div{width:100%; margin-bottom:30px; text-align:center;}
+	#header section > div:nth-child(3){margin-bottom:0;}
+}
+@@media screen and (max-width: 420px) {
+  #pageintro figcaption{margin:0; padding:10px 0; font-size:4rem;}
+  #introblocks article p{
+  width: 95%;
+    text-align: center;
+    }
+    .front{padding-left: 5%;}
+}
+@media screen and (max-width: 1150px){
+  #introblocks article .flip-container , .front ,.back{
+    height: 200px;
+
+  }
+  #introblocks article p{
+    height: 120px;
+    width: 80%;
+    text-align: center;
+    }
+    #introblocks footer{
+      align-items: center;
+      width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+  #introblocks article .flip-container , .front, .back{
+    height: 250px;
+width: 95%;
+  }
+  #introblocks article p, .singer-video{
+    height: 140px;
+    width: 95%;
+    text-align: center;
+    }
+    #introblocks footer{
+      align-items: center;
+      width: 95%;
+    }
+}
